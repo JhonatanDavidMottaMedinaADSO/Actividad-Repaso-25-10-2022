@@ -1,30 +1,79 @@
-.img{
-    display: block;
-    margin: 0 auto;
-}
-input[type="text"]{
-    display: block;
 
-}
-input[type="submit"]{
-    display: block;
-    margin-top: 10px;
-}
-table thead tr{
-    background: #fe8737;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-}
-table thead tr th{
-    padding: 10px;
-}
-table tbody tr{
+h1 {
+    line-height: 1;
     text-align: center;
+    font-size: 30px; 
+    color: blue;
+    text-shadow: 2px 2px 6px rgb(63, 163, 202);
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: 50px;
+    margin: 10px;  
 }
-table tbody tr:nth-child(2n+1){
-    background: #ffd9ce;
+
+.enunciado {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 15px 10px;
+    text-align: justify;
 }
-table tbody tr:nth-child(2n){
-    background: #ffeee7;
+label {
+    margin: 20px 15px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input {
+    margin: 20px 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: normal;
+    width: 20%;
+    box-sizing: content-box;
+    display: block;
+    padding: 5px;
+    background: #ffffff;
+    outline: non;
+}
+
+.enviar {
+ width: 5%;
+ border-radius: 10px;
+ border-style: solid;
+}
+
+.pago {
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 15px 10px;
+}
+
+dialog {
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #551855;
+}
+
+#close {
+    display: inline-block;
+    padding: 3px;
+    text-align: center;
+    line-height: 1;
+    border-radius: 15px;
+    position: relative;
+    width: 1.5em;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+
+table{
+    margin: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+thead{
+    background-color: #8192f5;
+}
+
+tbody{
+    background-color: rgb(136, 199, 178);
 }

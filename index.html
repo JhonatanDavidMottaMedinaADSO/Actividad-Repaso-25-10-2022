@@ -5,47 +5,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad Repaso 25 Octubre 2022</title>
-    <script src="main.js"></script>
+    <title>Ejercicio 2</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Ejercicio 1</h1>
-    <p>1.El programa muestra primero una tabla de notas con sus equivalentes en el Standard Grading System o el sistema
-        utilizado en los Estados Unidos que va desde la A hasta la F. El programa preguntará al usuario su nota y
-        transformará ese resultado al equivalente en el Standard Grading System. También el programa dará una pequeña
-        pero valiosa recomendación al usuario respecto a su nivel de estudio y calidad como estudiante.</p>
+    <h1>Ejercicio 2</h1>
+    <p class="enunciado">Desarrolle un algoritmo para la empresa Constructora Tecnovivir Casas C.A., que le permita calcular e
+        imprimir la nómina para su cancelación a un total de 50 obreros calificados a quienes debe cancelar por horas
+        trabajadas. La hora trabajada se pautó en 5,208.33 Pesos.</p>
+        
 
-    <img class="img" src="img/tabla.png">
-
-    <form id="myForm" method="get">
-        <div id="selecion">
-            <label>Traditional</label>
-            <input type="radio" name="scale" value="Traditional">
-            <label>Point Range</label>
-            <input type="radio" name="scale" value="Point_Range">
-        </div>
-        <input type="text" name="nota" placeholder="" required>
-        <input type="submit" value="Enviar">
+    <form id="horaTrabajo">
+        <label>Nombre:</label>
+        <input type="text" name="nom" required>
+        <label>Número de horas trabajadas:</label>
+        <input type="number" name="hora" required>
+        <input type="submit" value="Enviar" class="enviar">
     </form>
-
-    <dialog>
-        <button id="close">X</button>
-        <table>
-            <thead>
-                <tr>
-                    <th>Traditional (%)</th>
-                    <th>14-Point Range</th>
-                    <th>Letter</th>
-                    <th>SBG Rating</th>
-                    <th>Proficiency Level Witch Standard</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-    </dialog>
-
+    
+    <p class="pago">Su pago será de: <span id="pago"></span></p >     
+        <dialog>
+            <button id="close">X</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre de Trabajador</th>
+                        <th>Número de Horas</th>
+                        <th>Pago</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </dialog>   
 </body>
 
 </html>

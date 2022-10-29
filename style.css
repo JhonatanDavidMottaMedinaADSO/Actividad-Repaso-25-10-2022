@@ -1,10 +1,10 @@
 h1 {
     line-height: 1;
     text-align: center;
-    font-size: 40px; 
-    color: rgb(12, 109, 28);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 20px;
+    font-size: 30px; 
+    color: rgb(68, 7, 109);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 50px;
     margin: 10px;  
 }
 
@@ -14,6 +14,7 @@ h1 {
     margin: 15px 10px;
     text-align: justify;
 }
+
 label {
     margin: 20px 15px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -29,16 +30,61 @@ input {
     padding: 5px;
     background: #ffffff;
     outline: non;
+    border-style: dashed;
+    border-color: #fa1b1b;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    margin: 10px 15px;
 }
 
 .enviar {
-    width: 5%;
-    border-radius: 10px;
-    border-style: solid;
+ width: 5%;
+ border-radius: 10px;
+ border-style: solid;
 }
 
-div {
-    margin: 20px 15px;
+dialog {
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #fa1b1b;
+}
+
+#button {
+    display: inline-block;
+    padding: 3px;
+    text-align: center;
+    line-height: 1;
+    border-radius: 15px;
+    position: relative;
+    width: 1.5em;
+    text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: brown;
+    font-size: 15px;
+    border-color: #fa1b1b;
+    background-color: none;
+}
+
+table{
+    margin: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    border: none;
+}
+
+thead{
+    background-color: #e68679;
+}
+
+tbody{
+    background-color: rgb(231, 240, 155);
+}
+
+th {
+    padding: 10px;
+}
+
+td {
+    padding: 4px;
 }

@@ -1,42 +1,33 @@
-addEventListener("DOMContentLoaded", (e)=> {
+addEventListener("DOMContentLoaded", (e) => {
 
-    let numero = document.querySelector('#numero');
-    let respuesta = document.querySelector('#validacion');
+    let formulario = document.querySelector('#myForm')
+    let boton = document.querySelector('#button')
+    let ventana = document.querySelector('dialog')
     
-    
-    numero.addEventListener('submit', (e) => {
+    formulario.addEventListener("submit", (e) => {
         e.preventDefault();
+        let dataInput = Object.fromEntries(new FormData(e.target))
     
-        let dataInput = Object.fromEntries(new FormData(e.target));
-        let number = dataInput.num;
-    
-    
-        if (!Number.isInteger(number)) {
-            respuesta.innerHTML = 'El número debe ser entero';
-        }
-    
-        if (number <= 0) {
-            respuesta.innerHTML = 'El número debe ser positivo';
-        }
-    
-        let acum = 0;
-    
-        for ( i=1; i <= number/2 ; ++i) {
-            
-            if (number % i == 0) {
-    
-                acum += i;
-    
-                if (acum != 0 && acum == number) {
-                    respuesta.innerHTML = 'El número que ingresaste es perfecto'
-                }
-                else {
-                    respuesta.innerHTML = 'El número que ingresaste NO es perfecto'
-                }
-            } 
-            
-        }
-    
-        })
+        let sueldo = Number(dataInput.sueldoBase)
+        let venta1 = Number(dataInput.venta1)
+        let venta2 = Number(dataInput.venta2)
+        let venta3 = Number(dataInput.venta3)
+        let comisiones = Math.round((venta1 + venta2 + venta3)*0.10)
+        let sueldoTotal = sueldo + comisiones;
         
+        ventana.showModal();
+        let tabla = document.querySelector("tbody");
+        tabla.insertAdjacentHTML("beforeend", `
+            <tr>
+                <td>${dataInput.nom}</td>
+                <td>${dataInput.sueldoBase}</td>
+                <td>${comisiones}</td>
+                <td>${sueldoTotal}</td>
+            </tr>`);
+    })
+    
+    boton.addEventListener("click", (e) =>  {
+        ventana.close();
+    })
+    
     })

@@ -1,33 +1,42 @@
-addEventListener("DOMContentLoaded", (e) => {
-    let span = document.querySelector('#pago')
-    let calculo = document.querySelector('#horaTrabajo')
-    let btnClose = document.querySelector("#close")
-    let ventane = document.querySelector("dialog");
-    let cont = 0;
+addEventListener("DOMContentLoaded", (e)=> {
 
-    calculo.addEventListener('submit', (e) => {
+    let numero = document.querySelector('#numero');
+    let respuesta = document.querySelector('#validacion');
+    
+    
+    numero.addEventListener('submit', (e) => {
         e.preventDefault();
-        let dataInput = Object.fromEntries(new FormData(e.target))
-        let valorHora = 5208.33
-        let myHour = dataInput.hora
-        myHour *= valorHora
-        span.innerHTML = myHour
-
-        ventane.showModal();
-        if (cont < 50) {
-            let myTabla = document.querySelector("tbody");
-            myTabla.insertAdjacentHTML("beforeend", `
-                <tr>
-                    <td>${dataInput.nom}</td>
-                    <td>${dataInput.hora}</td>
-                    <td>${myHour}</td>
-                </tr>
-                `);
-            cont++;
+    
+        let dataInput = Object.fromEntries(new FormData(e.target));
+        let number = dataInput.num;
+    
+    
+        if (!Number.isInteger(number)) {
+            respuesta.innerHTML = 'El número debe ser entero';
         }
+    
+        if (number <= 0) {
+            respuesta.innerHTML = 'El número debe ser positivo';
+        }
+    
+        let acum = 0;
+    
+        for ( i=1; i <= number/2 ; ++i) {
+            
+            if (number % i == 0) {
+    
+                acum += i;
+    
+                if (acum != 0 && acum == number) {
+                    respuesta.innerHTML = 'El número que ingresaste es perfecto'
+                }
+                else {
+                    respuesta.innerHTML = 'El número que ingresaste NO es perfecto'
+                }
+            } 
+            
+        }
+    
+        })
+        
     })
-
-    btnClose.addEventListener("click", (e) => {
-        ventane.close();
-    })
-})

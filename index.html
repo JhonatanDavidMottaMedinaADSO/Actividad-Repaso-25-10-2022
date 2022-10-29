@@ -5,44 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 2</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Ejercicio 3</title>
     <script src="main.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Ejercicio 2</h1>
-    <p class="enunciado">Desarrolle un algoritmo para la empresa Constructora Tecnovivir Casas C.A., que le permita calcular e
-        imprimir la nómina para su cancelación a un total de 50 obreros calificados a quienes debe cancelar por horas
-        trabajadas. La hora trabajada se pautó en 5,208.33 Pesos.</p>
-        
-
-    <form id="horaTrabajo">
-        <label>Nombre:</label>
-        <input type="text" name="nom" required>
-        <label>Número de horas trabajadas:</label>
-        <input type="number" name="hora" required>
-        <input type="submit" value="Enviar" class="enviar">
-    </form>
+    <h1>Ejercicio 3</h1>
+    <p class="enunciado">Dados dos números enteros positivos N y D, se dice que D es un divisor de N si el resto de dividir N entre D
+        es 0. Se dice que un número N es perfecto si la suma de sus divisores (excluido el propio N) es N. Por ejemplo
+        28 es perfecto, pues sus divisores (excluido el 28) son: 1, 2, 4, 7 y 14 y su suma es 1+2+4+7+14=28. Hacer un
+        organigrama que dado un número N nos diga si es o no perfecto.</p>
     
-    <p class="pago">Su pago será de: <span id="pago"></span></p >     
-        <dialog>
-            <button id="close">X</button>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nombre de Trabajador</th>
-                        <th>Número de Horas</th>
-                        <th>Pago</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-        </dialog>   
+    <form id="numero">
+        <label>Escriba un numeró:</label>
+        <input type="number" name="num" step="any">
+        <input type="submit" value="enviar" class="enviar">
+    </form>
+    <div>
+        <p id="validacion"></p>
+    </div>
 </body>
 
 </html>

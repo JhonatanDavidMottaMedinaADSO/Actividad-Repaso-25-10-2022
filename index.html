@@ -5,49 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 4</title>
+    <title>Ejercicio 3</title>
     <script src="main.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Ejercicio 4</h1>
-
-    <p class="enunciado">Una compañía de seguros tiene contratados a N vendedores. Cada uno hace tres ventas a la semana. Su política
-        de pagos es que un vendedor recibe un sueldo base, y un 10% extra por comisiones de sus ventas. El gerente de su
-        compañía desea saber cuánto dinero obtendrá en la semana cada vendedor por concepto de comisiones por las tres
-        ventas realizadas, y cuanto tomando en cuenta su sueldo base y sus comisiones.</p>
-
-    <form id="myForm">
-        <label>Escriba su nombre:</label>    
-        <input type="text" name="nom">
-        <label>Digite su sueldo base</label>
-        <input type="number" step="any" name="sueldoBase">
-        <p>Digite sus ventas a continuación:</p>
-        <label>Venta 1:</label>
-        <input type="number" step="any" name="venta1">
-        <label>Venta 2:</label>
-        <input type="number" step="any" name="venta2">
-        <label>Venta 3:</label>
-        <input type="number" step="any" name="venta3">
-        <input type="submit" value="Enviar" class="enviar">
+    <h1>Ejercicio 3</h1>
+    <p class="enunciado">Dados dos números enteros positivos N y D, se dice que D es un divisor de N si el resto de dividir N entre D
+        es 0. Se dice que un número N es perfecto si la suma de sus divisores (excluido el propio N) es N. Por ejemplo
+        28 es perfecto, pues sus divisores (excluido el 28) son: 1, 2, 4, 7 y 14 y su suma es 1+2+4+7+14=28. Hacer un
+        organigrama que dado un número N nos diga si es o no perfecto.</p>
+    
+    <form id="numero">
+        <label>Escriba un numeró:</label>
+        <input type="number" name="num" step="any">
+        <input type="submit" value="enviar" class="enviar">
     </form>
-   
-    <dialog>
-        <button id="button">X</button>
-        <table>
-            <thead>
-                <tr>
-                    <th>Nombre de Trabajador</th>
-                    <th>Sueldo Base</th>
-                    <th>Comisiones</th>
-                    <th>Sueldo Total</th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
-    </dialog>  
+    <div>
+        <p id="validacion"></p>
+    </div>
 </body>
 
 </html>

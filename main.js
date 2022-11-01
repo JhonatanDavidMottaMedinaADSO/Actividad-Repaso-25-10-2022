@@ -1,33 +1,34 @@
-addEventListener("DOMContentLoaded", (e) => {
+addEventListener("DOMContentLoaded", (e)=> {
 
-    let formulario = document.querySelector('#myForm')
-    let boton = document.querySelector('#button')
-    let ventana = document.querySelector('dialog')
+    let numero = document.querySelector('#numero');
+    let respuesta = document.querySelector('#validacion');
     
-    formulario.addEventListener("submit", (e) => {
+    
+    numero.addEventListener('submit', (e) => {
         e.preventDefault();
-        let dataInput = Object.fromEntries(new FormData(e.target))
     
-        let sueldo = Number(dataInput.sueldoBase)
-        let venta1 = Number(dataInput.venta1)
-        let venta2 = Number(dataInput.venta2)
-        let venta3 = Number(dataInput.venta3)
-        let comisiones = Math.round((venta1 + venta2 + venta3)*0.10)
-        let sueldoTotal = sueldo + comisiones;
+        let dataInput = Object.fromEntries(new FormData(e.target));
+        let number = Number(dataInput.num);
+    
+        let acum = 0;
+    
+        for ( i=1; i <= number/2 ; ++i) {
+            
+            if (number % i == 0) {
+    
+                acum += i;
+    
+                if (acum != 0 && acum == number) {
+                    respuesta.innerHTML = 'El número que ingresaste es perfecto'
+                }
+                else {
+                    console.log("c");
+                    respuesta.innerHTML = 'El número que ingresaste NO es perfecto'
+                }
+            } 
+            
+        }
+    
+        })
         
-        ventana.showModal();
-        let tabla = document.querySelector("tbody");
-        tabla.insertAdjacentHTML("beforeend", `
-            <tr>
-                <td>${dataInput.nom}</td>
-                <td>${dataInput.sueldoBase}</td>
-                <td>${comisiones}</td>
-                <td>${sueldoTotal}</td>
-            </tr>`);
-    })
-    
-    boton.addEventListener("click", (e) =>  {
-        ventana.close();
-    })
-    
     })
